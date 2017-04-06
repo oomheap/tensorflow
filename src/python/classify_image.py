@@ -68,7 +68,6 @@ class NodeLookup(object):
                 FLAGS.model_dir, 'imagenet_synset_to_human_label_map.txt')
         self.node_lookup = self.load(label_lookup_path, uid_lookup_path)
 
-    @staticmethod
     def load(label_lookup_path, uid_lookup_path):
         """Loads a human readable English name for each softmax node.
     
