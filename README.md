@@ -1,4 +1,4 @@
-***notes on Tensorflow***  
+##_notes on Tensorflow_
 
 ###[OpenCV](http://docs.opencv.org/master/d9/df8/tutorial_root.html)  
 **Q :** `error: (-215) scn == 3 || scn == 4 in function cv::cvtColor`  
