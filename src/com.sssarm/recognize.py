@@ -145,7 +145,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--model_dir',
         type=str,
-        default='/tmp/imagenet',
+        default='/tmp/imagenet_bak',
         help="""\
           Path to classify_image_graph_def.pb,
           imagenet_synset_to_human_label_map.txt, and
@@ -167,5 +167,6 @@ if __name__ == '__main__':
     FLAGS, unparsed = parser.parse_known_args()
 
     # image = 'D:/Programs/dog.jpg'
-    image = '/tmp/imagenet/dog.jpg'
+    image = '/tmp/imagenet_bak/dog.jpg'
+    # image = 'D:/tmp/imagenet/rose.jpg'
     run_inference_on_image(image)
