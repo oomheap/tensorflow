@@ -27,6 +27,7 @@ def f_capture():
     foundFace = faceClassifier.detectMultiScale(cvtImage, scaleFactor=1.3, minNeighbors=9, minSize=(50, 50),
                                                 flags=cv2.CASCADE_SCALE_IMAGE)
     print("找到{}个".format(len(foundFace)))
+    print("找到%s个%s" % (len(foundFace), "face"))
 
     for (x, y, w, h) in foundFace:
         img = cv2.rectangle(objImage, (x, y), (x + w, y + h), (0, 0, 255), 2)

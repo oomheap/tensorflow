@@ -161,7 +161,7 @@ def run_training():
         graph = tf.get_default_graph()
 
         # And then after everything is built, start the training loop.
-        for step in xrange(FLAGS.max_steps):
+        for step in range(FLAGS.max_steps):
             start_time = time.time()
             # print(
             #     "train_images:" + str(train_images)

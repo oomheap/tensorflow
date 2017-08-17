@@ -40,7 +40,7 @@ For testing through python, change and run this code.
 import numpy as np
 import tensorflow as tf
 
-imagePath = '/tmp/imagenet/flower.jpg'
+imagePath = '/tmp/imagenet/rose.jpg'
 modelFullPath = '/tmp/output_graph.pb'
 labelsFullPath = '/tmp/output_labels.txt'
 
@@ -80,7 +80,9 @@ def run_inference_on_image():
         for node_id in top_k:
             human_string = labels[node_id]
             score = predictions[node_id]
-            print('%s (score = %.5f)' % (human_string, score))
+            if score > 0.9:
+                print(str(human_string))
+                print('%s (score = %.5f)' % (human_string, score))
 
         answer = labels[top_k[0]]
         return answer
